@@ -64,7 +64,7 @@ def get_class(ip):
     bits_set.reverse()
     
     bit_counter = 0
-    for bit in bits_set:
+    for bit in bits_set[:4]:
         if bit:
             bit_counter += 1
         else:
@@ -135,7 +135,6 @@ while True:
     print("First Host: {}".format('.'.join(str_first_host)))
     print("Last Host: {}".format('.'.join(str_last_host)))
     print("Broadcast: {}".format('.'.join(str_broadcast)))
-    if get_class(raw_ip):
-        print("Class: {}".format(get_class(raw_ip)))
+    print("Class: {}".format(get_class(raw_ip)))
 
     print()
